@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "text"
     },
     "description": {
       "type": "text"
@@ -25,7 +25,7 @@
       "inversedBy": "photo_catalogs"
     },
     "img": {
-      "type": "string"
+      "type": "text"
     }
   }
 }
