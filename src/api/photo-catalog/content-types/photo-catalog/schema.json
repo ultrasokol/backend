@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photo_catalogs",
+  "info": {
+    "singularName": "photo-catalog",
+    "pluralName": "photo-catalogs",
+    "displayName": "PhotoCatalog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "photo_subs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::photo-sub.photo-sub",
+      "inversedBy": "photo_catalogs"
+    }
+  }
+}
