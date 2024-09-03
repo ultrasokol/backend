@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "video_catalogs",
+  "info": {
+    "singularName": "video-catalog",
+    "pluralName": "video-catalogs",
+    "displayName": "VideoCatalog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "video": {
+      "type": "text"
+    },
+    "video_subs": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::video.video",
+      "mappedBy": "video_catalogs"
+    }
+  }
+}
