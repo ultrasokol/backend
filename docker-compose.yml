@@ -70,7 +70,7 @@ services:
     ports:
       - '80:80'  # Открываем порт 80
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf  # Указываем путь к конфигурации Nginx
+      - ./nginx.conf:/etc/nginx/sites-available/configcfg.conf  # Указываем путь к конфигурации Nginx
     networks:
       - strapi
 
