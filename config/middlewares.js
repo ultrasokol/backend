@@ -5,7 +5,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://dkireeeo.beget.tech'], // Твой фронтенд-домен
+      origin: ['http://dkireeeo.beget.tech', '*'], // Твой фронтенд-домен
       methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization'],
     },
