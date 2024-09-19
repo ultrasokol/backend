@@ -4,7 +4,7 @@ module.exports = [
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['https://ultralokol.dkireenkov.ru'], // Ваш домен
+      origin: ['http://dkireeeo.beget.tech/'], // Ваш домен
     },
   },
   
