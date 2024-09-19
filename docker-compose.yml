@@ -63,6 +63,17 @@ services:
     depends_on:
       - strapiDB
 
+        nginx:
+    container_name: nginx
+    image: nginx:latest
+    restart: unless-stopped
+    ports:
+      - '80:80'  # Открываем порт 80
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf  # Указываем путь к конфигурации Nginx
+    networks:
+      - strapi
+
 volumes:
   strapi-data:
 
