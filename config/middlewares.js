@@ -1,10 +1,12 @@
+// config/middlewares.js
 module.exports = [
   'strapi::logger',
   'strapi::errors',
   {
     name: 'strapi::cors',
     config: {
-      origin: '*', // Разрешить все домены
+      origin: '*',
+      headers: '*',
     },
   },
   'strapi::security',
