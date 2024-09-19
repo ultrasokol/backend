@@ -1,16 +1,15 @@
 module.exports = [
-  // Добавляем CORS настройки здесь
+  'strapi::errors',
+  'strapi::security',
   {
     name: 'strapi::cors',
     config: {
       enabled: true,
-      origin: ['http://dkireeeo.beget.tech/'], // Ваш домен
+      origin: ['http://dkireeeo.beget.tech'], // Твой фронтенд-домен
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization'],
     },
   },
-  
-  'strapi::logger',
-  'strapi::errors',
-  'strapi::security',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
