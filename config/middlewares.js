@@ -8,8 +8,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud', '*'],
-          'media-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud', '*'],
+          'img-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud'],
+          'media-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud'],
           upgradeInsecureRequests: null,
         },
       },
@@ -18,7 +18,15 @@ module.exports = [
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
-  'strapi::body',
+  {
+    name: 'strapi::body',
+    config: {
+      multipart: true, // Позволяет загружать файлы
+      formidable: {
+        maxFileSize: 100 * 1024 * 1024, // Установите нужный вам размер (например, 100 МБ)
+      },
+    },
+  },
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
