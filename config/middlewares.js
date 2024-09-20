@@ -1,12 +1,9 @@
-// config/middlewares.js
 module.exports = [
   'strapi::logger',
   'strapi::errors',
   {
-    name: 'strapi::cors',
+    name: 'strapi::security',
     config: {
-      origin: '*',
-      headers: '*',
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
@@ -18,7 +15,7 @@ module.exports = [
       },
     },
   },
-  'strapi::security',
+  'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
