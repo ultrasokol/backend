@@ -8,8 +8,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud'],
-          'media-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud'],
+          'img-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud', '*'],
+          'media-src': ["'self'", 'data:', 'blob:', 'strapi.io', 'dl.airtable.com', 's3.timeweb.cloud', '*'],
           upgradeInsecureRequests: null,
         },
       },
