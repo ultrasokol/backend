@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * photo-sub router
+ * business router
  */
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::photo-sub.photo-sub');
+module.exports = createCoreRouter('api::business.business');

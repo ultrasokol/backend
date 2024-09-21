@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjectshootins",
+  "info": {
+    "singularName": "subjectshootin",
+    "pluralName": "subjectshootins",
+    "displayName": "subjectshootin"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

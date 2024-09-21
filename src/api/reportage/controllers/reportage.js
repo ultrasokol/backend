@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * photo-sub controller
+ * reportage controller
  */
 
 const { createCoreController } = require('@strapi/strapi').factories;
 
-module.exports = createCoreController('api::photo-sub.photo-sub');
+module.exports = createCoreController('api::reportage.reportage');

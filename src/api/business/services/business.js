@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * photo-sub service
+ * business service
  */
 
 const { createCoreService } = require('@strapi/strapi').factories;
 
-module.exports = createCoreService('api::photo-sub.photo-sub');
+module.exports = createCoreService('api::business.business');
